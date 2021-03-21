@@ -1,2 +1,6 @@
 <p>posts works!</p>
 <app-form (formSubmission)="addPost($event)"></app-form>
+
+<div>
+  {{ posts | json }}
+</div>

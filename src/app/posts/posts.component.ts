@@ -7,13 +7,15 @@ import { Post } from '../shared/interfaces/post';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
-  posts?: Post[];
+  posts?: Post[] = [];
 
   constructor() {}
 
   ngOnInit(): void {}
 
   addPost(post: Post) {
-    this.posts?.push(post)
+    console.log({ addPostPartent: post });
+    this.posts?.push(post);
+    console.log(this.posts);
   }
 }
