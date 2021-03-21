@@ -1,7 +1,20 @@
-<div [formGroup]="postForm">
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()">
   <h3>New Post</h3>
   <label>
     Title:
-    <input type="text" formControlName="title">
+    <input type="text" formControlName="title" />
   </label>
-</div>
+  <div formArrayName="labels">
+    <h3>Labels</h3>
+    <button (click)="addLabel()">Add Label</button>
+
+    <div *ngFor="let label of labels.controls; let i = index">
+      <!-- The repeated alias template -->
+      <label>
+        Label:
+        <input type="text" [formControlName]="i" />
+      </label>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!postForm.valid">Submit</button>
+</form>

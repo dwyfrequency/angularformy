@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormModule } from './form/form.module';
+import { PostsModule } from './posts/posts.module';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { FormModule } from './form/form.module';
     AppRoutingModule,
     NoopAnimationsModule,
     FormModule,
+    PostsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
